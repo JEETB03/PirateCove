@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+:root {
+  --pirate-midnight: #071821;
+  --pirate-sea: #11443c;
+  --pirate-gold: #E1B75A;
+  --pirate-gold-dark: #A8822A;
+  --pirate-blood: #b34031;
+  --pirate-wood: #5E4531;
+  --text-white: #faf6ed;
+  --text-secondary: #c2b78e;
+}
+
+body {
+  background: linear-gradient(135deg, var(--pirate-midnight) 60%, var(--pirate-sea));
+  color: var(--text-white);
+  min-height: 100vh;
+  font-family: 'Pirata One', cursive;
+}
+
+.navbar {
+  background: rgba(7, 24, 33, 0.85);
+  border-bottom: 2.5px solid var(--pirate-gold);
+  font-family: 'Pirata One', cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
+}
+
+.navbar-logo {
+  height: 32px;
+  width: 32px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.nav-logo, .logo, .hero-logo {
+  font-family: 'Pirata One', cursive;
+  font-size: 2.2rem;
+  color: var(--pirate-gold);
+}
+
+.hero-logo-img {
+  height: 80px;
+  max-width: 200px;
+  width: auto;
+  margin: 0 auto 14px auto;
+  display: block;
+  object-fit: contain;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2vw 0;
+}
+.feature-card {
+  background: var(--pirate-wood);
+  border-radius: 14px;
+  border: 2.5px solid var(--pirate-blood);
+  box-shadow: 0 0 22px -7px var(--pirate-gold-dark);
+  transform: rotate(-2deg);
+  transition: transform 0.5s, box-shadow 0.2s;
+  margin-bottom: 18px;
+  min-width: 130px;
+  padding: 18px;
+  text-align: center;
+}
+.feature-card:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 7px 28px -5px var(--pirate-gold);
+}
+
+.btn-primary, .btn-danger {
+  background: var(--pirate-gold);
+  color: var(--pirate-midnight);
+  border: 1.5px solid var(--pirate-gold-dark);
+  font-family: 'Pirata One', cursive;
+  font-size: 1rem;
+  padding: 8px 24px;
+  border-radius: 7px;
+  margin: 12px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-primary:hover {
+  background: var(--pirate-blood);
+  color: var(--pirate-gold);
+}
+.btn-danger {
+  background: var(--pirate-blood);
+  color: var(--pirate-gold);
+}
+.btn-danger:hover {
+  background: var(--pirate-gold);
+  color: var(--pirate-blood);
+}
+
+input, textarea, select {
+  border-radius: 4px;
+  border: 1.5px solid var(--pirate-blood);
+  padding: 7px 10px;
+  font-family: 'Pirata One', cursive;
+  margin-bottom: 12px;
+}
+
+.pin-disabled {
+  background: #ddd;
+}

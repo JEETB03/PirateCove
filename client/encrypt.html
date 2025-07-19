@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Vault | PirateCove</title>
+  <link href="./styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="./pirate-logo.png" alt="Pirate Logo" class="navbar-logo" />
+      <span class="nav-logo">PirateCove</span>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Create a Secret Vault</h1>
+    <form id="encryptForm">
+      <label>Type of treasure:</label>
+      <select id="contentType" onchange="toggleContentInput()">
+        <option value="text">Text</option>
+        <option value="file">File</option>
+      </select>
+      <div id="textInput">
+        <textarea id="secretText" placeholder="Enter your secret..."></textarea>
+      </div>
+      <div id="fileInput" style="display:none;">
+        <input type="file" id="fileUpload" />
+        <p id="fileStatus">No file selected</p>
+      </div>
+      <label><input type="checkbox" id="pinToggle" onchange="togglePinInput()" /> Require PIN</label>
+      <input type="password" id="pin" placeholder="4-digit PIN" disabled class="pin-disabled" />
+      <label>Vault expiry (hours):</label>
+      <input type="number" id="expiryTime" value="24" />
+      <label>Destruct timer (seconds):</label>
+      <input type="number" id="destructTimer" value="120" />
+      <button type="submit" class="btn-primary">Create Vault</button>
+    </form>
+    <div id="loading" style="display:none">⏳ Encrypting your secret...</div>
+    <div id="result"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="./encrypt.js"></script>
+</body>
+</html>

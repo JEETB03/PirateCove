@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>View Vault | PirateCove</title>
+  <link href="./styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="./pirate-logo.png" alt="Pirate Logo" class="navbar-logo" />
+      <span class="nav-logo">PirateCove</span>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Access Your Treasure</h1>
+    <div id="pinPrompt" style="display:none">
+      <p>🔐 Enter PIN:</p>
+      <input type="password" id="pinInput" maxlength="4" />
+      <button id="pinSubmit" class="btn-primary">Unlock Vault</button>
+    </div>
+    <div id="loading">⛏️ Digging up treasure...</div>
+    <div id="content" style="display:none">
+      <div id="vaultContent"></div>
+      <div class="destructTimer">
+        <span>⏳ Self-destruct in:</span>
+        <span id="countdown">--:--</span>
+        <button class="btn-danger" id="destroyNowBtn">Destroy Now</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="./vault.js"></script>
+</body>
+</html>
