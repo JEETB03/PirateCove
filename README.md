@@ -33,7 +33,6 @@ Visit http://localhost:3000 after running locally, or deploy to your favorite cl
 
 ## Project Structure
 
-`
 piratecove/
 ├── client/
 │   ├── index.html
@@ -54,7 +53,6 @@ piratecove/
 │       └── neatbandit.js
 ├── package.json
 
-`
 
 - **client/**: All static frontend assets (HTML, CSS, JS, images).
 - **server/**: All backend Node.js logic, routes, database, and utilities.
