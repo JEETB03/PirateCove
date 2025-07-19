@@ -27,27 +27,26 @@
 
 ## 🌴 Project Structure
 
-```
+- `piratecove/`
+  - `client/`
+    - `index.html`
+    - `encrypt.html`
+    - `vault.html`
+    - `styles.css`
+    - `encrypt.js`
+    - `vault.js`
+    - `pirate-logo.jpg`
+    - `pirate-full-logo.jpg`
+  - `server/`
+    - `app.js`
+    - `db.json`
+    - `routes/`
+      - `encrypt.js`
+      - `vault.js`
+    - `utils/`
+      - `neatbandit.js`
+  - `package.json`
 
-piratecove/
-├── client/               # Frontend (HTML, CSS, JS)
-│   ├── index.html
-│   ├── encrypt.html
-│   ├── vault.html
-│   ├── styles.css
-│   ├── encrypt.js
-│   ├── vault.js
-│   ├── pirate-logo.jpg
-│   └── pirate-full-logo.jpg
-├── server/               # Backend (Node.js + Express)
-│   ├── app.js
-│   ├── db.json
-│   ├── routes/
-│   │   ├── encrypt.js
-│   │   └── vault.js
-│   └── utils/
-│       └── neatbandit.js
-├── package.json
 
 ````
 
